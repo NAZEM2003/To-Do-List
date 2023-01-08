@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f2f7f0;
+}
+body{
+    background-color: #26424e;
+    font-family: sans-serif;
+}
+.container{
+    margin: 70px auto;
+    width: 500px;
+}
+.add{
+    position: relative;
+    background-color: #ff6600;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+.inputSection{
+    width: 100%;
+    padding: 40px 0;
+}
+.input{
+    width: 75%;
+    border: none;
+    border-bottom: #26424e 1px solid ;
+    outline: none;
+    padding: 15px;
+    margin: 0;
+    background-color: #dd6600;
+    font-size: 20px;
+}
+.addBtn{
+    width: 20%;
+    border: none;
+    background-color: #26424e;
+    padding: 16px;
+    margin: 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.addBtn:hover{
+    background-color: #48646f;
+}
+.task{
+    cursor: pointer;
+    position: relative;
+    padding: 15px 15px 15px 30px;
+    font-size: 20px;
+    transition: all 0.5s;
+    user-select: none;
+}
+.task:hover{
+    border-bottom:1px solid #ff6600 ;
+}
+
+.taskList{
+    list-style-type: none;
+}
+.tasksContainer{
+    max-height: 214px;
+    overflow-y: auto;
+}
+
+.taskNumberText{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    background-color: #26424e;
+    padding: 7px 12px;
+
+}
+.taskNumber{
+    font-size: 20px;
+    color: #ff6600;
+    padding: 5px;
+}
+
+.doneTaskText{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    background-color: #26424e;
+    padding: 7px 12px;
+}
+.doneTaskNumber{
+    font-size: 20px;
+    color: #ff6600;
+    padding: 5px;
+}
+
+
+.closeBtn{
+    display: none;
+    position: absolute;
+    right: 15px;
+}
+.task:hover .closeBtn{
+    display: inline-block;
+}
+.closeBtn i{
+    transition: all .3s;
+}
+.closeBtn i:hover{
+    color: #ec1d1d;
+}
+
+.taskList li.done{
+    background-color: #757575;
+    color: #222;
+    text-decoration: line-through;
+}
+.taskList li.done::before{
+    content: '';
+    width: 8px;
+    height: 17px;
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    border: 2px solid #3f3;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
